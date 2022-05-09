@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To do list</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    <div id="leaderbord"><h1>Leaderboard</h1></div>
-</body>
+    <link rel="stylesheet" href="../src/style.css">
+  </head>
+  <body>
+    <section id="leaderbord"><h1>Leaderboard</h1></section>
+    <div id="sections">
+      <section id="recentScores">
+        <div class="subTitle">
+          <h2>Recent scores</h2>
+          <button>Refresh</button>
+        </div>
+        <div id="scores"></div>
+      </section>
+      <section>
+        <form id="addScore">
+          <h2 class="subtitle">Add your score</h2>
+          <input id="inputName" type="text" placeholder="Your name">
+          <input id="inputScore" type="text" placeholder="Your score">
+          <input id="submitBtn" type="submit" value="Submit">
+          </form>
+      </section>
+    </div>
+  </body>
 </html>
