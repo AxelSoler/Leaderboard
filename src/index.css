@@ -1,0 +1,65 @@
+#leaderbord {
+  font-size: 64px;
+  margin-left: 84px;
+}
+
+#sections {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.subtitle {
+  font-size: 52px;
+  margin: 0;
+}
+
+#addScore {
+  display: flex;
+  flex-direction: column;
+}
+
+#refreshBtn {
+  font-size: 24px;
+  margin-left: 48px;
+  padding: 8px 24px;
+  border: 4px solid black;
+}
+
+input {
+  border: 4px solid black;
+  margin-top: 48px;
+  font-size: 30px;
+  padding: 8px 16px;
+}
+
+#submitBtn {
+  width: fit-content;
+  align-self: flex-end;
+}
+
+form {
+  width: 380px;
+}
+
+#scoresLeaderboard {
+  border: 4px solid black;
+  margin-top: 48px;
+}
+
+h4 {
+  margin: 0;
+}
+
+.scoreDiv {
+  padding: 12px 0 12px 12px;
+  font-size: 28px;
+}
+
+.scoreDiv:nth-child(odd) {
+  background-color: rgb(190, 190, 190);
+}
