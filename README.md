@@ -2,6 +2,8 @@
 
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
+> The leaderboard website displays scores submitted by different players and allows you to keep a record of it. 
+
 ## Built With
 
 - Major languages: HTML, CSS, Javascript
@@ -57,4 +59,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](./MIT.md) licensed.
+This project is [MIT](./LICENSE.md) licensed.
