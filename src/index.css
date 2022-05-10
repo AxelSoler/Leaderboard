@@ -45,3 +45,20 @@ input {
 form {
   width: 380px;
 }
+
+#scoresLeaderboard {
+  border: 4px solid black;
+  margin-top: 48px;
+}
+
+h4 {
+  margin: 0;
+}
+.scoreDiv {
+  padding: 12px 0 12px 12px;
+  font-size: 28px;
+}
+
+.scoreDiv:nth-child(odd) {
+  background-color: rgb(158, 158, 158);
+}
