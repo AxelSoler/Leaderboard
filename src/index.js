@@ -1,4 +1,4 @@
-import './index.css'
+import './index.css';
 import scores from "./modules/scores.js";
 import displayScores from './modules/display.js';
 

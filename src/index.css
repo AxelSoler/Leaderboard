@@ -1,6 +1,6 @@
 #leaderbord {
   font-size: 64px;
-  margin-left: 48px;
+  margin-left: 84px;
 }
 
 #sections {
@@ -60,5 +60,5 @@ h4 {
 }
 
 .scoreDiv:nth-child(odd) {
-  background-color: rgb(158, 158, 158);
+  background-color: rgb(190, 190, 190);
 }
