@@ -1,6 +1,7 @@
 #leaderbord {
+  display: flex;
+  justify-content: center;
   font-size: 64px;
-  margin-left: 84px;
 }
 
 #sections {
@@ -49,6 +50,8 @@ form {
 #scoresLeaderboard {
   border: 4px solid black;
   margin-top: 48px;
+  height: 280px;
+  overflow-y: scroll;
 }
 
 h4 {
