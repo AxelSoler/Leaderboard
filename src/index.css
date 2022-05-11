@@ -1,6 +1,7 @@
-@font-face { font-family: 'sonic-bold';
+@font-face {
+  font-family: 'sonic-bold';
   src: url('./fonts/NiseSegaSonic.TTF');
-} 
+}
 
 body {
   background-image: url('./img/Sonic.jpg');
@@ -15,6 +16,7 @@ body {
   display: flex;
   justify-content: center;
   font-size: 48px;
+  margin-bottom: 64px;
 }
 
 #sections {
@@ -81,6 +83,7 @@ input {
   width: 360px;
   overflow-y: scroll;
 }
+
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -98,7 +101,7 @@ input {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(27, 155, 48,);
+  background: rgb(23, 140, 42);
 }
 
 ::placeholder {
