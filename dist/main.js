@@ -115,7 +115,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.css */ \"./src/index.css\");\n/* harmony import */ var _modules_scores_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/scores.js */ \"./src/modules/scores.js\");\n/* harmony import */ var _modules_display_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/display.js */ \"./src/modules/display.js\");\n\n\n\n\nconst leaderboard = document.getElementById('scoresLeaderboard');\nconst refreshBtn = document.getElementById('refreshBtn');\nrefreshBtn.addEventListener('click', () => window.location.reload());\n\nwindow.onload = () => {\n  (0,_modules_display_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(_modules_scores_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"], leaderboard);\n};\n\n//# sourceURL=webpack://to-do-list/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.css */ \"./src/index.css\");\n/* harmony import */ var _modules_display_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/display.js */ \"./src/modules/display.js\");\n/* harmony import */ var _modules_post_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/post.js */ \"./src/modules/post.js\");\n\n\n\n\nconst leaderboard = document.getElementById('scoresLeaderboard');\nconst refreshBtn = document.getElementById('refreshBtn');\nconst urlAPI = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Zl4d7IVkemOTTVgoifqoiwjfa/scores/';\n\n(0,_modules_post_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(urlAPI);\n\nrefreshBtn.addEventListener('click', () => window.location.reload());\n\nwindow.onload = () => {\n  (0,_modules_display_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(urlAPI, leaderboard);\n};\n\n//# sourceURL=webpack://to-do-list/./src/index.js?");
 
 /***/ }),
 
@@ -125,17 +125,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _ind
   \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst displayScores = (scores, board) => {\n  scores.forEach((element) => {\n    board.innerHTML += `<div class='scoreDiv'>\n      <h4>${element.name}: ${element.score}</h4>\n    </div>`;\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (displayScores);\n\n//# sourceURL=webpack://to-do-list/./src/modules/display.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nObject(function webpackMissingModule() { var e = new Error(\"Cannot find module './modules/scores.js'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }());\n\n\nconst displayScores = async (url, board) => {\n  const result = await Object(function webpackMissingModule() { var e = new Error(\"Cannot find module './modules/scores.js'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(url);\n  result.forEach((element) => {\n    board.innerHTML += `<div class='scoreDiv'>\n      <h4>${element.name}: ${element.score}</h4>\n    </div>`;\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (displayScores);\n\n//# sourceURL=webpack://to-do-list/./src/modules/display.js?");
 
 /***/ }),
 
-/***/ "./src/modules/scores.js":
-/*!*******************************!*\
-  !*** ./src/modules/scores.js ***!
-  \*******************************/
+/***/ "./src/modules/post.js":
+/*!*****************************!*\
+  !*** ./src/modules/post.js ***!
+  \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst scores = [\n  {\n    name: 'Axel',\n    score: 100,\n  },\n  {\n    name: 'Ivan',\n    score: 48,\n  },\n  {\n    name: 'Sebastian',\n    score: 12,\n  },\n  {\n    name: 'Emilia',\n    score: 91,\n  },\n  {\n    name: 'Fulanito',\n    score: 0,\n  },\n  {\n    name: 'Aimal',\n    score: 99,\n  },\n  {\n    name: 'Alex',\n    score: 12,\n  },\n];\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (scores);\n\n//# sourceURL=webpack://to-do-list/./src/modules/scores.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst inputName = document.getElementById('inputName');\nconst inputScore = document.getElementById('inputScore');\nconst submitBtn = document.getElementById('submitBtn');\nconst form = document.getElementById('addScore');\n\nconst postImput = (url) => {\n  submitBtn.addEventListener('click', (e) => {\n    e.preventDefault();\n    fetch(url, {\n      method: 'POST',\n      headers: { 'Content-Type': 'application/json' },\n      body: JSON.stringify({\n        user: inputName.value.trim(),\n        score: inputScore.value.trim(),\n      }),\n    })\n      .then((response) => response.json())\n      .then((json) => console.log(json));\n      form.reset();\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (postImput);\n\n//# sourceURL=webpack://to-do-list/./src/modules/post.js?");
 
 /***/ })
 

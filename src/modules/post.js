@@ -15,7 +15,6 @@ const postImput = (url) => {
       }),
     })
       .then((response) => response.json())
-      .then((json) => console.log(json));
       form.reset();
   });
 };
