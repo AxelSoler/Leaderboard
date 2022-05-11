@@ -1,3 +1,9 @@
+body {
+  background-image: url('./img/Sonic.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 #leaderbord {
   display: flex;
   justify-content: center;
@@ -6,7 +12,7 @@
 
 #sections {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 .row {
@@ -28,11 +34,14 @@
   font-size: 24px;
   margin-left: 48px;
   padding: 8px 24px;
-  border: 4px solid black;
+  border: 4px solid rgb(33, 209, 54, 0.7);
+  background-color: transparent;
 }
 
 input {
-  border: 4px solid black;
+  border: 4px solid rgb(33, 209, 54, 0.7);
+  background-color: rgb(59, 59, 248, 0.8);
+  color: rgb(255, 253, 253);
   margin-top: 48px;
   font-size: 30px;
   padding: 8px 16px;
@@ -48,10 +57,34 @@ form {
 }
 
 #scoresLeaderboard {
-  border: 4px solid black;
+  border: 6px solid rgb(33, 209, 54, 0.7);
   margin-top: 48px;
   height: 280px;
+  width: 360px;
   overflow-y: scroll;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(33, 209, 54, 0.7);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(189, 22, 22);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(27, 155, 48,);
+}
+
+::placeholder {
+  color: rgb(255, 253, 253);
 }
 
 h4 {
@@ -61,8 +94,11 @@ h4 {
 .scoreDiv {
   padding: 12px 0 12px 12px;
   font-size: 28px;
+  color: rgb(255, 253, 253);
+  background-color: rgb(59, 59, 248, 0.8);
 }
 
 .scoreDiv:nth-child(odd) {
-  background-color: rgb(190, 190, 190);
+  color: rgb(35, 35, 249);
+  background-color: rgb(242, 254, 16);
 }
