@@ -14,8 +14,8 @@ const postImput = (url) => {
         score: inputScore.value.trim(),
       }),
     })
-      .then((response) => response.json())
-      form.reset();
+      .then((response) => response.json());
+    form.reset();
   });
 };
 
