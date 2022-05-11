@@ -4,7 +4,7 @@ import postImput from './modules/post.js';
 
 const leaderboard = document.getElementById('scoresLeaderboard');
 const refreshBtn = document.getElementById('refreshBtn');
-const urlAPI = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Zl4d7IVkemOTTVgoifqoiwjfa/scores/';
+const urlAPI = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Zl4d7IVkemOTTVgoifqoiwjfb/scores/';
 
 postImput(urlAPI);
 
