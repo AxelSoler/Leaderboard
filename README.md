@@ -9,9 +9,9 @@
 - Major languages: HTML, CSS, Javascript
 - Technologies used: GIT, Github,Gitflow, linters
 
-## Live Demo (link webpage when Pull Request aproved and merge it)
+## Live Demo
 
-[Live Demo Link]()
+[Live Demo Link](https://axelsoler.github.io/Leaderboard/)
 
 ## Getting Started
 
