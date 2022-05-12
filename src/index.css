@@ -184,7 +184,7 @@ h4 {
   .scoreDiv {
     background-color: rgb(59, 59, 248, 0.8);
   }
-  
+
   .scoreDiv:nth-child(odd) {
     background-color: rgb(242, 254, 16, 0.8);
   }
