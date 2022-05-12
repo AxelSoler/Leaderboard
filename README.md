@@ -11,7 +11,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://axelsoler.github.io/Leaderboard/)
+[Live Demo Link](https://axelsoler.github.io/Leaderboard/dist)
 
 ## Getting Started
 
