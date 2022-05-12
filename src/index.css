@@ -1,11 +1,27 @@
+@font-face {
+  font-family: 'sonic-bold';
+  src: url('./fonts/NiseSegaSonic.TTF');
+}
+
+body {
+  background-image: url('./img/Sonic.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 #leaderbord {
-  font-size: 64px;
-  margin-left: 84px;
+  color: rgb(35, 35, 249);
+  -webkit-text-stroke: 4px rgb(242, 254, 16, 0.9);
+  font-family: 'sonic-bold', sans-serif;
+  display: flex;
+  justify-content: center;
+  font-size: 48px;
+  margin-bottom: 64px;
 }
 
 #sections {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 .row {
@@ -13,53 +29,121 @@
   align-items: center;
 }
 
+@keyframes example {
+  0% { color: red; }
+  33% { color: blue; }
+  66% { color: green; }
+  100% { color: red; }
+}
+
 .subtitle {
-  font-size: 52px;
+  font-size: 36px;
+  color: rgb(35, 35, 249);
+  -webkit-text-stroke: 2px rgb(242, 254, 16, 0.9);
+  font-family: 'sonic-bold', sans-serif;
   margin: 0;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-delay: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 #addScore {
   display: flex;
   flex-direction: column;
+  width: 400px;
+}
+
+#recentScores {
+  display: flex;
+  flex-direction: column;
 }
 
 #refreshBtn {
-  font-size: 24px;
-  margin-left: 48px;
+  font-size: 32px;
+  height: 64px;
+  width: 180px;
+  align-self: flex-end;
+  margin-top: 48px;
   padding: 8px 24px;
-  border: 4px solid black;
+  color: rgb(255, 253, 253);
+  border: 6px solid rgb(242, 254, 16, 0.9);
+  background-color: rgb(59, 59, 248, 0.8);
 }
 
 input {
-  border: 4px solid black;
+  border: 6px solid rgb(33, 209, 54, 0.8);
+  background-color: rgb(59, 59, 248, 0.8);
+  color: rgb(255, 253, 253);
   margin-top: 48px;
   font-size: 30px;
   padding: 8px 16px;
 }
 
 #submitBtn {
-  width: fit-content;
+  height: 64px;
+  width: 180px;
   align-self: flex-end;
-}
-
-form {
-  width: 380px;
+  border: 6px solid rgb(242, 254, 16, 0.9);
 }
 
 #scoresLeaderboard {
-  border: 4px solid black;
+  border: 6px solid rgb(33, 209, 54, 0.7);
   margin-top: 48px;
+  height: 280px;
+  width: 360px;
+  overflow-y: scroll;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(5, 81, 14, 0.7);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(189, 22, 22);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(23, 140, 42);
+}
+
+::placeholder {
+  color: rgb(255, 253, 253);
+}
+
+@keyframes scoreMov {
+  0% { left: 0; }
+  100% { left: 100px; }
 }
 
 h4 {
   margin: 0;
+  width: fit-content;
+  position: relative;
+  animation-name: scoreMov;
+  animation-duration: 10s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 .scoreDiv {
   padding: 12px 0 12px 12px;
   font-size: 28px;
+  color: rgb(255, 253, 253);
+  background-color: rgb(59, 59, 248, 0.8);
 }
 
 .scoreDiv:nth-child(odd) {
-  background-color: rgb(190, 190, 190);
+  color: rgb(35, 35, 249);
+  background-color: rgb(242, 254, 16);
 }

@@ -1,8 +1,8 @@
-# Leaderboard
+# Sonic Leaderboard
 
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-> The leaderboard website displays scores submitted by different players and allows you to keep a record of it. 
+> The Sonic leaderboard website displays scores submitted by different players and allows you to keep a record of it. 
 
 ## Built With
 
