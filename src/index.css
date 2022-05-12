@@ -146,3 +146,46 @@ h4 {
   color: rgb(35, 35, 249);
   background-color: rgb(242, 254, 16);
 }
+
+@media screen and (max-width: 768px) {
+  #sections {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  #leaderbord {
+    font-size: 28px;
+    margin-top: 64px;
+  }
+
+  #recentScores {
+    margin-bottom: 48px;
+  }
+
+  #refreshBtn {
+    align-self: center;
+    margin-top: 64px;
+  }
+
+  #addScore {
+    margin-bottom: 48px;
+  }
+
+  #submitBtn {
+    align-self: center;
+  }
+
+  body {
+    background-image: url('./img/sonicBackground.jpg');
+    background-size: contain;
+    background-color: black;
+  }
+
+  .scoreDiv {
+    background-color: rgb(59, 59, 248, 0.8);
+  }
+  
+  .scoreDiv:nth-child(odd) {
+    background-color: rgb(242, 254, 16, 0.8);
+  }
+}
