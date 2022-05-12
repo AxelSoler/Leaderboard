@@ -154,8 +154,14 @@ h4 {
   }
 
   #leaderbord {
-    font-size: 28px;
+    font-size: 24px;
     margin-top: 64px;
+  }
+
+  .subtitle {
+    font-size: 28px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   #recentScores {
@@ -187,5 +193,9 @@ h4 {
 
   .scoreDiv:nth-child(odd) {
     background-color: rgb(242, 254, 16, 0.8);
+  }
+  
+  #addScore {
+    width: 350px;
   }
 }
