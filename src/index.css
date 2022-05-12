@@ -120,9 +120,20 @@ input {
   color: rgb(255, 253, 253);
 }
 
+@keyframes scoreMov {
+  0% { left: 0; }
+  100% { left: 100px; }
+}
+
 h4 {
   margin: 0;
   width: fit-content;
+  position: relative;
+  animation-name: scoreMov;
+  animation-duration: 10s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 .scoreDiv {
